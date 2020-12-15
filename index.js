@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
-inquirer
-    .prompt([
+const questions = [
         {
             type: 'input',
             message: 'Enter Your Project Title.',
@@ -14,8 +14,9 @@ inquirer
             name: 'Discription',
         },
         {
-            type: 'input',
-            message: 'Table of Contents.',
+            type: 'checkbox',
+            message: 'Choose all of the bullet points tha apply to you.',
+            choices: ['Title', 'Description', 'Table of Contents', 'Installations', 'Usage', 'License', 'Contributing', 'Tests', 'Questions', 'Github', 'Email'],
             name: 'Table of Contents',
         },
         {
@@ -29,8 +30,9 @@ inquirer
             name: 'Usage',
         },
         {
-            type: 'input',
-            message: 'License.',
+            type: 'list',
+            message: 'Choose the License you used.',
+            choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License'],
             name: 'License',
         },
         {
@@ -44,24 +46,34 @@ inquirer
             name: 'Tests',
         },
         {
-            type: 'inpute',
+            type: 'input',
             message: 'Questions.',
             name: 'Questions',
-        }
-    ])
-    .then((response) => {
-        console.log(response)
-    fs.writeFile('README.md', createREADME(response)), 
-        function (err) {
-            if (err) return console.log(err);
+        },
+        {
+            type: 'input',
+            message: 'Type your Github URL',
+            name: 'Github'
+        },
+        {
+            type: 'input',
+            message: 'Type your Email',
+            name: 'Email'
+        } 
+            
+    ]
+function writeToFile(fileName, response) {
+    if(err){
+        return console.log(err);
     }
-    })
 
-function createREADME(response){return 
-    `
-    ###${response.Title}
-    `
+    return fs.writeToFile(fileName, response);
 }
 
-// function call to initialize program
+function init() {
+    inquirer.prompt(questions)
+    .then((response) => fs.writeFileSync('README.md', generateMarkdown(response)))
+    .then(() => console);
+}
+
 init();
