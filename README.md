@@ -1,10 +1,9 @@
-// function to generate markdown for README
-function generateMarkdown(response) {
-  return `
-  # Title: ${response.Title}
+
+  # Title:
+  *  README.md Generator
 
   ## Discription: 
-  * ${response.Discription}
+  * In this Application your with be prompted with questions in the terminal and once completed they will creat a structerd README.md with the input that the user inputed. 
 
   ## Table of Contents: 
   * [Title](#Title)
@@ -19,30 +18,27 @@ function generateMarkdown(response) {
   * [Email](#Email)
 
   ## Installation: 
-  * ${response.Installation}
+  * index.js, node.js, README.md, package.json, gitignore, generateMarkdown, node_modules
 
   ## Usage:
-  * ${response.Usage}
+  * None yet
 
   ## License: 
-  * ${response.License}
+  * MIT License
 
   ## Contributing: 
-  * ${response.Contributing}
+  * I am open to contributions
 
   ## Tests: 
-  * ${response.Tests}
+  * N/A
 
   ## Questions: 
-  * ${response.Questions}
+  * N/A
   
   ## Github: 
-  * ${response.Github}
+  * https://www.github.com
 
   ## Email: 
-  * ${response.Email}
+  * https://www.gmail.com
 
-  `;
-}
-
-module.exports = generateMarkdown;
+  

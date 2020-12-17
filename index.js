@@ -16,8 +16,8 @@ const questions = [
         {
             type: 'checkbox',
             message: 'Choose all of the bullet points tha apply to you.',
-            choices: ['Title', 'Description', 'Table of Contents', 'Installations', 'Usage', 'License', 'Contributing', 'Tests', 'Questions', 'Github', 'Email'],
-            name: 'Table of Contents',
+            choices: ['Title', 'Description', 'TableOfContents', 'Installations', 'Usage', 'License', 'Contributing', 'Tests', 'Questions', 'Github', 'Email'],
+            name: 'TableOfContents',
         },
         {
             type: 'input',
