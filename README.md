@@ -1,9 +1,8 @@
 
-  # Title:
-  *  README.md Generator
+  # Title: README Generator
 
   ## Discription: 
-  * In this Application your with be prompted with questions in the terminal and once completed they will creat a structerd README.md with the input that the user inputed. 
+  * README Generator will prompt the user with questions in the terminal and print them out in a well structured README.md 
 
   ## Table of Contents: 
   * [Title](#Title)
@@ -18,16 +17,16 @@
   * [Email](#Email)
 
   ## Installation: 
-  * index.js, node.js, README.md, package.json, gitignore, generateMarkdown, node_modules
+  * index.js, node.js, README.md, package.json, gitignore,generateMarkdown, node_modules
 
   ## Usage:
-  * None yet
+  * N/A
 
   ## License: 
   * MIT License
 
   ## Contributing: 
-  * I am open to contributions
+  * I am currently open to any contributions
 
   ## Tests: 
   * N/A
@@ -36,9 +35,9 @@
   * N/A
   
   ## Github: 
-  * https://www.github.com
+  * https://github.com/HarrisonNoblett
 
   ## Email: 
-  * https://www.gmail.com
+  * https://HarrisonNoblett55@gmail.com
 
   

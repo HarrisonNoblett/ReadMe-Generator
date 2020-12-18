@@ -1,7 +1,9 @@
+// Require methods
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
+// Promted questions using inquirer
 const questions = [
         {
             type: 'input',
@@ -62,6 +64,8 @@ const questions = [
         } 
             
     ]
+
+// a function to print what the user inputs into the README.md that is created
 function writeToFile(fileName, response) {
     if(err){
         return console.log(err);
@@ -70,6 +74,7 @@ function writeToFile(fileName, response) {
     return fs.writeToFile(fileName, response);
 }
 
+// a function to prompt the questions provided above
 function init() {
     inquirer.prompt(questions)
     .then((response) => fs.writeFileSync('README.md', generateMarkdown(response)))
